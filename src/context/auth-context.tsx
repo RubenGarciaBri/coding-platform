@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { AuthSection } from "../components/AuthSection";
+
 type AuthContextProps = {
   user: null;
 };
@@ -14,6 +16,8 @@ const AuthContext = React.createContext<Partial<AuthContextProps>>({
 
 const AuthProvider = ({ children }: IPropTypes) => {
   const [user, setUser] = React.useState(null);
+
+  // if (!user) return <AuthSection />;
 
   return (
     <AuthContext.Provider
