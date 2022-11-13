@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import Image from "next/image";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
 
 const AuthSection = () => {
@@ -8,10 +9,12 @@ const AuthSection = () => {
       <div className="flex items-center justify-center h-screen px-4 py-12 bg-gray-50 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
-            <img
+            <Image
               className="w-auto h-12 mx-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt="Your Company"
+              width={32}
+              height={32}
             />
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-center text-gray-900">
               Sign in to your account
