@@ -2,18 +2,12 @@ import * as React from "react";
 
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
-import { transform } from "sucrase";
 
-const transpile = (code: string): string => {
-  try {
-    return transform(code, { transforms: ["jsx", "imports"] }).code;
-  } catch (e) {
-    console.error(e);
-    return "";
-  }
-};
+import transpile from "../../utils/transpile";
 
-const CodeEditor = () => {
+interface IPropTypes {}
+
+const CodeEditor = ({}: IPropTypes) => {
   const [code, setCode] = React.useState("");
 
   React.useEffect(() => {
@@ -49,7 +43,8 @@ const CodeEditor = () => {
   </html>
   `;
 
-  const onChange = React.useCallback((value, viewUpdate) => {
+  // TODO: Remove anys
+  const onChange = React.useCallback((value: any, viewUpdate: any) => {
     setCode(value);
   }, []);
 

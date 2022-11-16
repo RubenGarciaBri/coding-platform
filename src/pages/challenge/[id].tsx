@@ -1,9 +1,23 @@
 import * as React from "react";
 
-import { CodeEditor } from "../../components";
+import { useRouter } from "next/router";
+
+import { CodeEditor, EditorLayout } from "../../components";
 
 const Index = () => {
-  return <CodeEditor />;
+  const router = useRouter();
+  const [id, setId] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    if (!router.isReady) return;
+    setId(Number(router.query.id));
+  }, [router]);
+
+  return id ? (
+    <EditorLayout id={id}>
+      <CodeEditor />
+    </EditorLayout>
+  ) : null;
 };
 
 export default Index;

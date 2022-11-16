@@ -2,22 +2,21 @@ import * as React from "react";
 
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
 import { profileMenuData } from "../../../data/profileMenu";
 
 const Navbar = () => {
   return (
-    <Disclosure
-      as="nav"
-      className="text-gray-200 bg-gray-800 border-b border-gray-200 shadow"
-    >
+    <Disclosure as="nav" className="text-gray-200 bg-gray-800 shadow-md">
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14">
-              <span className="text-lg font-semibold">React Hero</span>
+              <Link href="/">
+                <span className="text-lg font-semibold">React Hero</span>
+              </Link>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <button
                   type="button"

@@ -1,13 +1,12 @@
 import * as React from "react";
 
 import { ChallengeList } from "../components/Challenges";
-import { Layout } from "../components/Layout";
-
-const challenges = [{ name: "First Steps" }];
+import { DefaultLayout } from "../components/Layouts";
+import { challengesData } from "../data";
 
 export default function Home() {
   return (
-    <Layout>
+    <DefaultLayout>
       <div className="mb-4">
         <h1 className="mb-1 text-2xl">Welcome back, Ruben.</h1>
         <p>
@@ -15,7 +14,7 @@ export default function Home() {
           skills
         </p>
       </div>
-      <ChallengeList title="Beginner's Path" challenges={challenges} />
-    </Layout>
+      <ChallengeList title="Beginner's Path" challenges={challengesData} />
+    </DefaultLayout>
   );
 }

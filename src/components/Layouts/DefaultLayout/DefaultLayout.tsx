@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import { Navbar } from "../Nav";
+import { Navbar } from "../../Nav";
 
 interface IPropTypes {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: IPropTypes) => {
+const DefaultLayout = ({ children }: IPropTypes) => {
   return (
     <div className="min-h-screen text-gray-200 bg-gray-800">
       <Navbar />
@@ -15,4 +15,4 @@ const Layout = ({ children }: IPropTypes) => {
   );
 };
 
-export default Layout;
+export default DefaultLayout;

@@ -13,7 +13,7 @@ const ChallengeList = ({ title, challenges }: IPropTypes) => {
       <p className="mb-1">{title}</p>
       <ul>
         {challenges.map(({ name }, i) => (
-          <Challenge key={name + i} name={name} id={i} />
+          <Challenge key={name + i} name={name} id={i + 1} />
         ))}
       </ul>
     </div>
