@@ -10,10 +10,10 @@ interface IPropTypes {
 
 const EditorLayout = ({ children, id }: IPropTypes) => {
   return (
-    <div className="min-h-screen text-gray-200 bg-gray-800">
+    <div className="h-screen text-gray-200 bg-gray-800">
       <Navbar />
       <ChallengeBar id={id} />
-      <div>{children}</div>
+      {children}
     </div>
   );
 };

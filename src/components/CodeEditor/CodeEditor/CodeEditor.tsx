@@ -3,28 +3,14 @@ import * as React from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 
-import transpile from "../../utils/transpile";
+import transpile from "../../../utils/transpile";
+import format from "../../../utils/format";
+import { codeSample } from "../../../data/codeSample";
 
 interface IPropTypes {}
 
 const CodeEditor = ({}: IPropTypes) => {
-  const [code, setCode] = React.useState("");
-
-  React.useEffect(() => {
-    setCode(
-      `const App = () => {
-      const [test, setTest] = React.useState(true)
-      console.log(test)
-    }
-    
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    );`
-    );
-  }, []);
+  const [code, setCode] = React.useState(format(codeSample));
 
   const html = `
   <html>
@@ -49,23 +35,35 @@ const CodeEditor = ({}: IPropTypes) => {
   }, []);
 
   return (
-    <>
-      <CodeMirror
-        theme="dark"
-        height="200px"
-        extensions={[javascript({ jsx: true, typescript: true })]}
-        value={code}
-        onChange={onChange}
-      />
+    <div className="flex h-full">
+      <div className="w-1/2">
+        <div className="flex items-center justify-end p-2">
+          <button
+            className="px-2 py-1 text-sm text-gray-800 bg-white rounded"
+            onClick={() => {
+              setCode(format(code));
+            }}
+          >
+            Format Code
+          </button>
+        </div>
+        <CodeMirror
+          theme="dark"
+          height="100%"
+          extensions={[javascript({ jsx: true, typescript: true })]}
+          value={code}
+          onChange={onChange}
+          className="h-full"
+        />
+      </div>
       <iframe
         title="output"
         srcDoc={html}
         sandbox="allow-scripts"
         width="100%"
-        height="300px"
-        className="border-2 border-gray-200"
+        className="h-full p-4 bg-white grow"
       />
-    </>
+    </div>
   );
 };
 
