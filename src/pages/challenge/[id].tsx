@@ -13,9 +13,11 @@ const Index = () => {
     setId(Number(router.query.id));
   }, [router]);
 
-  <EditorLayout>
-    <CodeEditor id={id || undefined} />
-  </EditorLayout>;
+  return (
+    <EditorLayout>
+      <CodeEditor id={id || undefined} />
+    </EditorLayout>
+  );
 };
 
 export default Index;
