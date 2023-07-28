@@ -9,18 +9,21 @@ import { profileMenuData } from "../../../data/profileMenu";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="text-gray-200 bg-gray-800 shadow-md pin-theme-dark">
+    <Disclosure
+      as="nav"
+      className="py-2 bg-gray-100 border-b shadow-sm border-grayA-600 text-gray-1200"
+    >
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14">
               <Link href="/">
-                <span className="text-lg font-semibold">React Hero</span>
+                <span className="text-xl font-semibold">React Hero</span>
               </Link>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <button
                   type="button"
-                  className="p-1 text-gray-400 bg-gray-800 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="p-1 bg-gray-300 rounded-full text-gray-1100 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="w-6 h-6" aria-hidden="true" />

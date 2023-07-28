@@ -7,9 +7,11 @@ import transpile from "../../../utils/transpile";
 import format from "../../../utils/format";
 import { codeSample } from "../../../data/codeSample";
 
-interface IPropTypes {}
+interface IPropTypes {
+  id?: number;
+}
 
-const CodeEditor = ({}: IPropTypes) => {
+const CodeEditor = ({ id }: IPropTypes) => {
   const [code, setCode] = React.useState(format(codeSample));
 
   const html = `
@@ -37,9 +39,10 @@ const CodeEditor = ({}: IPropTypes) => {
   return (
     <div className="flex h-full">
       <div className="w-1/2">
-        <div className="flex items-center justify-end p-2">
+        <div className="flex items-center justify-between p-2">
+          {!!id && <p className="text-sm text-gray-1100">Challenge {id}</p>}
           <button
-            className="px-2 py-1 text-sm text-gray-800 bg-white rounded"
+            className="px-2 py-1 text-sm bg-gray-300 border border-gray-600 rounded text-gray-1100"
             onClick={() => {
               setCode(format(code));
             }}
@@ -61,7 +64,7 @@ const CodeEditor = ({}: IPropTypes) => {
         srcDoc={html}
         sandbox="allow-scripts"
         width="100%"
-        className="h-full p-4 bg-white grow"
+        className="h-full p-4 bg-white border border-gray-600 grow"
       />
     </div>
   );
