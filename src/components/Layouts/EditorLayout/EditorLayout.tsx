@@ -1,18 +1,17 @@
 import * as React from "react";
 
-import { ChallengeBar } from "../../Challenges/ChallengeBar";
+// import { ChallengeBar } from "../../Challenges/ChallengeBar";
 import { Navbar } from "../../Nav";
 
 interface IPropTypes {
   children: React.ReactNode;
-  id: number;
 }
 
-const EditorLayout = ({ children, id }: IPropTypes) => {
+const EditorLayout = ({ children }: IPropTypes) => {
   return (
-    <div className="h-screen text-gray-200 bg-gray-800">
+    <div className="h-screen">
       <Navbar />
-      <ChallengeBar id={id} />
+      {/* <ChallengeBar id={id} /> */}
       {children}
     </div>
   );
