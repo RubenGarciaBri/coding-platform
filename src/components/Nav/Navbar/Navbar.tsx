@@ -9,7 +9,7 @@ import { profileMenuData } from "../../../data/profileMenu";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="text-gray-200 bg-gray-800 shadow-md">
+    <Disclosure as="nav" className="text-gray-200 bg-gray-800 shadow-md pin-theme-dark">
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

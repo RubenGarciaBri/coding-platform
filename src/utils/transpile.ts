@@ -5,7 +5,7 @@ const transpile = (code: string): string => {
     return transform(code, { transforms: ["jsx", "imports"] }).code;
   } catch (e) {
     console.error(e);
-    return "";
+    return `Error: ${(e as Error).message}`;
   }
 };
 
