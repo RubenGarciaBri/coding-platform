@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { ChallengeList } from "../components/Challenges";
+import { SnippetList } from "../components/Snippets";
 import { DefaultLayout } from "../components/Layouts";
-import { challengesData } from "../data";
+import { snippetData } from "../data";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           skills
         </p>
       </div>
-      <ChallengeList title="Beginner's Path" challenges={challengesData} />
+      <SnippetList title="Favourites" snippets={snippetData} />
     </DefaultLayout>
   );
 }

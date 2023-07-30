@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="py-2 bg-gray-100 border-b shadow-sm border-grayA-600 text-gray-1200"
+      className="py-2 bg-gray-200 border-b shadow-sm border-grayA-600 text-gray-1200"
     >
       {({ open }) => (
         <>

@@ -39,8 +39,7 @@ const CodeEditor = ({ id }: IPropTypes) => {
   return (
     <div className="flex h-full">
       <div className="w-1/2">
-        <div className="flex items-center justify-between p-2">
-          {!!id && <p className="text-sm text-gray-1100">Challenge {id}</p>}
+        <div className="flex justify-end p-2">
           <button
             className="px-2 py-1 text-sm bg-gray-300 border border-gray-600 rounded text-gray-1100"
             onClick={() => {
