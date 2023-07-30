@@ -19,6 +19,7 @@
     "@types/react-dom": "18.0.8",
     "@uiw/react-codemirror": "^4.12.4",
     "chai": "^4.3.7",
+    "convex": "^1.0.2",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "expect": "^29.3.1",
