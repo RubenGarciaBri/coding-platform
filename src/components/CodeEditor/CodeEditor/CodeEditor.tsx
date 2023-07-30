@@ -5,7 +5,7 @@ import { javascript } from "@codemirror/lang-javascript";
 
 import transpile from "../../../utils/transpile";
 import format from "../../../utils/format";
-import { codeSample } from "../../../data/codeSample";
+import { codeSample } from "../../../data";
 
 interface IPropTypes {
   id?: number;

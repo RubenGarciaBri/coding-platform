@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { SnippetList } from "../components/Snippets";
 import { DefaultLayout } from "../components/Layouts";
-import { snippetData } from "../data";
+import { snippetList } from "../data";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           skills
         </p>
       </div>
-      <SnippetList title="Favourites" snippets={snippetData} />
+      <SnippetList title="Favourites" snippets={snippetList} />
     </DefaultLayout>
   );
 }

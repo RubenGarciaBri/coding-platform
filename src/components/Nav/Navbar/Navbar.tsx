@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
-import { profileMenuData } from "../../../data/profileMenu";
+import { profileMenuLinks } from "../../../data";
 
 const Navbar = () => {
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-gray-900 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      {profileMenuData.map(({ name, onClick }) => (
+                      {profileMenuLinks.map(({ name, onClick }) => (
                         <Menu.Item key={name}>
                           {({ active }) => (
                             <a
@@ -113,7 +113,7 @@ const Navbar = () => {
                 </button>
               </div>
               <div className="mt-3 space-y-1">
-                {profileMenuData.map(({ name, onClick }) => (
+                {profileMenuLinks.map(({ name, onClick }) => (
                   <a
                     key={name}
                     onClick={onClick}

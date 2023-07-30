@@ -1,4 +1,4 @@
-const navigationData = [
+const navLinks = [
   {
     name: "Home",
     path: "/",
@@ -9,4 +9,4 @@ const navigationData = [
   },
 ];
 
-export default navigationData;
+export default navLinks;
