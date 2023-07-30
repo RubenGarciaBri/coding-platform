@@ -1,0 +1,1 @@
+{"name": "Toggle Button", "description": "A simple button that shows and hides some text when toggled", "code": "const Message = ({ text, show }) => {}"}

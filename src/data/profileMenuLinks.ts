@@ -1,4 +1,4 @@
-const profileMenuData = [
+const profileMenuLinks = [
   {
     name: "Profile",
     onClick: () => {},
@@ -13,4 +13,4 @@ const profileMenuData = [
   },
 ];
 
-export default profileMenuData;
+export default profileMenuLinks;
